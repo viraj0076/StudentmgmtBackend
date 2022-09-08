@@ -18,6 +18,11 @@ public class StudentController {
     {
         return studentRepo.findAll();
     }
+    @GetMapping
+    public String getWelcomeMessage()
+    {
+        return "<h1>Welcome to the Home page</h1>";
+    }
     @GetMapping("/student/{id}")
     public List<Student> studentById(@PathVariable Integer id)
     {
